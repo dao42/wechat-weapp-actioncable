@@ -1,4 +1,5 @@
 #= require ./connection_monitor
+#= require ./web_socket
 
 # Encapsulate the cable connection held by the consumer. This is an internal class not intended for direct user manipulation.
 
@@ -67,8 +68,7 @@ class ActionCable.Connection
     @getState() in states
 
   getState: ->
-    return state.toLowerCase() for state, value of WebSocket when value is @webSocket?.readyState
-    null
+    @webSocket?.getState()
 
   installEventHandlers: ->
     for eventName of @events
