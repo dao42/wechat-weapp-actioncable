@@ -3,7 +3,15 @@
 #= require ./action_cable/consumer
 
 @ActionCable =
-  INTERNAL: <%= ActionCable::INTERNAL.to_json %>
+  INTERNAL:
+    message_types: {
+      welcome: "welcome",
+      ping: "ping",
+      confirmation: "confirm_subscription",
+      rejection: "reject_subscription"
+    },
+    default_mount_path: "/cable",
+    protocols: ["actioncable-v1-json", "actioncable-unsupported"]
 
   createConsumer: (url) ->
     url ?= @INTERNAL.default_mount_path

@@ -1,24 +1,26 @@
 {
-  "name": "actioncable",
+  "name": "wechat-weapp-actioncable",
   "version": "5.1.0-rc1",
-  "description": "WebSocket framework for Ruby on Rails.",
-  "main": "lib/assets/compiled/action_cable.js",
+  "description": "WeChat WeApp adapter for Action Cable.",
+  "main": "dist/action_cable.js",
   "files": [
-    "lib/assets/compiled/*.js"
+    "dist/*.js"
   ],
   "repository": {
     "type": "git",
-    "url": "rails/rails"
+    "url": "80percent/wechat-weapp-actioncable"
   },
   "keywords": [
     "websockets",
     "actioncable",
-    "rails"
+    "rails",
+    "wechat",
+    "weapp"
   ],
-  "author": "David Heinemeier Hansson <david@loudthinking.com>",
+  "author": "80percent, Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rails/rails/issues"
+    "url": "https://github.com/80percent/wechat-weapp-actioncable/issues"
   },
-  "homepage": "http://rubyonrails.org/"
+  "homepage": "https://github.com/80percent/wechat-weapp-actioncable"
 }
