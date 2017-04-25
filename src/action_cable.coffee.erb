@@ -26,4 +26,4 @@
   log: (messages...) ->
     if @debugging
       messages.push(Date.now())
-      console.log("[ActionCable]", messages...)
+      console.log("ActionCable:", messages...)
